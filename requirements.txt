@@ -21,7 +21,7 @@ stanza>=1.7.0
 
 # Database
 sqlalchemy>=2.0.25
-sqlite3
+# sqlite3 is built-in to Python, no need to install
 
 # API Framework
 fastapi>=0.109.0
