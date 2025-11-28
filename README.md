@@ -114,13 +114,13 @@ Includes 32 diverse financial news articles covering:
 
 ## Evaluation Criteria Coverage
 
-✅ **Functional Correctness (40%)** - Deduplication, entity extraction, query relevance, impact mapping all working
+**Functional Correctness (40%)** - Deduplication, entity extraction, query relevance, impact mapping all working
 
-✅ **Technical Implementation (30%)** - LangGraph multi-agent system, RAG with embeddings, clean code
+**Technical Implementation (30%)** - LangGraph multi-agent system, RAG with embeddings, clean code
 
-✅ **Innovation & Completeness (20%)** - Context-aware queries, hierarchical relationships, comprehensive features
+**Innovation & Completeness (20%)** - Context-aware queries, hierarchical relationships, comprehensive features
 
-✅ **Documentation & Demo (10%)** - Clear README, working demos, good code structure
+**Documentation & Demo (10%)** - Clear README, working demos, good code structure
 
 ## License
 
