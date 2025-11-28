@@ -1,7 +1,7 @@
 <h1 align="center">Financial News Intelligence System</h1>
 
 <p align="center">
-  <img src="Tradl_AI_logo.jpeg" alt="Tradl AI Logo" width="500"/>
+  <img src="Tradl_AI_logo.jpeg" alt="Tradl AI Logo" width="200"/>
 </p>
 
 ---
