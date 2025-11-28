@@ -1,0 +1,259 @@
+[
+  {
+    "id": "N1",
+    "title": "HDFC Bank announces 15% dividend, board approves stock buyback",
+    "content": "HDFC Bank, India's largest private sector bank, announced a 15% dividend payout to shareholders. The board of directors has also approved a stock buyback program worth Rs 10,000 crores. The announcement came after the bank reported strong quarterly earnings with a 20% increase in net profit.",
+    "source": "Economic Times",
+    "published_at": "2024-01-15T10:30:00Z",
+    "url": "https://example.com/news/n1"
+  },
+  {
+    "id": "N2",
+    "title": "RBI raises repo rate by 25bps to 6.75%, citing inflation concerns",
+    "content": "The Reserve Bank of India increased the repo rate by 25 basis points to 6.75% in a surprise move. RBI Governor Shaktikanta Das cited persistent inflation concerns and global economic uncertainties. This marks the fourth consecutive rate hike this year.",
+    "source": "RBI Official",
+    "published_at": "2024-01-15T11:00:00Z",
+    "url": "https://example.com/news/n2"
+  },
+  {
+    "id": "N3",
+    "title": "ICICI Bank opens 500 new branches across Tier-2 cities",
+    "content": "ICICI Bank announced plans to expand its network by opening 500 new branches in Tier-2 cities over the next 18 months. The expansion is part of the bank's strategy to tap into the growing retail banking segment in smaller cities.",
+    "source": "Business Standard",
+    "published_at": "2024-01-15T12:00:00Z",
+    "url": "https://example.com/news/n3"
+  },
+  {
+    "id": "N4",
+    "title": "Banking sector NPAs decline to 5-year low, credit growth at 16%",
+    "content": "The banking sector's non-performing assets (NPAs) have declined to a 5-year low, according to RBI data. Overall credit growth in the banking sector has reached 16%, indicating strong economic recovery. Public sector banks showed significant improvement in asset quality.",
+    "source": "Financial Express",
+    "published_at": "2024-01-15T13:00:00Z",
+    "url": "https://example.com/news/n4"
+  },
+  {
+    "id": "N5",
+    "title": "Reserve Bank hikes interest rates by 0.25% in surprise move",
+    "content": "In an unexpected decision, the Reserve Bank of India raised interest rates by 0.25 percentage points. The central bank's monetary policy committee voted unanimously for the increase, pointing to rising inflation pressures and the need to maintain price stability.",
+    "source": "Reuters",
+    "published_at": "2024-01-15T11:15:00Z",
+    "url": "https://example.com/news/n5"
+  },
+  {
+    "id": "N6",
+    "title": "Central bank raises policy rate 25bps, signals hawkish stance",
+    "content": "India's central bank increased the policy rate by 25 basis points, signaling a more hawkish monetary policy stance. The move comes amid concerns about inflation remaining above the target range. Analysts expect further rate hikes in the coming months.",
+    "source": "Bloomberg",
+    "published_at": "2024-01-15T11:30:00Z",
+    "url": "https://example.com/news/n6"
+  },
+  {
+    "id": "N7",
+    "title": "Axis Bank reports 18% profit growth in Q3, beats estimates",
+    "content": "Axis Bank reported an 18% year-on-year growth in net profit for the third quarter, beating analyst estimates. The bank's net interest income grew by 22%, driven by strong loan growth and improved margins. Asset quality continued to improve with lower NPAs.",
+    "source": "Moneycontrol",
+    "published_at": "2024-01-16T09:00:00Z",
+    "url": "https://example.com/news/n7"
+  },
+  {
+    "id": "N8",
+    "title": "Kotak Mahindra Bank announces digital banking initiatives",
+    "content": "Kotak Mahindra Bank unveiled new digital banking initiatives aimed at enhancing customer experience. The bank plans to invest Rs 500 crores in digital transformation over the next two years, focusing on AI-powered services and mobile banking solutions.",
+    "source": "The Hindu Business Line",
+    "published_at": "2024-01-16T10:00:00Z",
+    "url": "https://example.com/news/n8"
+  },
+  {
+    "id": "N9",
+    "title": "RBI increases repo rate by 25 basis points to combat inflation",
+    "content": "The Reserve Bank of India has increased the repo rate by 25 basis points as part of its efforts to combat rising inflation. The rate now stands at 6.75%, the highest in recent years. The decision was taken to ensure price stability and sustainable economic growth.",
+    "source": "PTI",
+    "published_at": "2024-01-15T11:05:00Z",
+    "url": "https://example.com/news/n9"
+  },
+  {
+    "id": "N10",
+    "title": "State Bank of India reduces home loan rates by 10 basis points",
+    "content": "State Bank of India, the country's largest lender, reduced home loan rates by 10 basis points across all tenures. The move is expected to boost demand in the real estate sector. The bank's home loan portfolio has grown by 15% in the last quarter.",
+    "source": "Times of India",
+    "published_at": "2024-01-16T11:00:00Z",
+    "url": "https://example.com/news/n10"
+  },
+  {
+    "id": "N11",
+    "title": "Reliance Industries reports record quarterly revenue",
+    "content": "Reliance Industries Limited reported record quarterly revenue of Rs 2.5 lakh crores, driven by strong performance across all business segments. The oil-to-telecom conglomerate's net profit increased by 25% year-on-year, with Jio and retail businesses showing exceptional growth.",
+    "source": "Economic Times",
+    "published_at": "2024-01-17T09:00:00Z",
+    "url": "https://example.com/news/n11"
+  },
+  {
+    "id": "N12",
+    "title": "TCS wins $2 billion deal from European client",
+    "content": "Tata Consultancy Services secured a $2 billion multi-year deal from a major European financial services company. The contract involves digital transformation services and cloud migration. This is one of the largest deals signed by an Indian IT company this year.",
+    "source": "Business Standard",
+    "published_at": "2024-01-17T10:00:00Z",
+    "url": "https://example.com/news/n12"
+  },
+  {
+    "id": "N13",
+    "title": "Infosys announces partnership with global cloud provider",
+    "content": "Infosys announced a strategic partnership with a leading global cloud provider to accelerate digital transformation for clients. The partnership will focus on AI and machine learning solutions for enterprise customers. Infosys expects this to generate $500 million in revenue over three years.",
+    "source": "Financial Express",
+    "published_at": "2024-01-17T11:00:00Z",
+    "url": "https://example.com/news/n13"
+  },
+  {
+    "id": "N14",
+    "title": "IT sector faces headwinds from global slowdown",
+    "content": "The Indian IT sector is experiencing headwinds due to global economic slowdown and reduced technology spending by clients. Major IT companies have reported slower growth in new deal wins. Analysts expect the sector to face challenges in the coming quarters.",
+    "source": "Moneycontrol",
+    "published_at": "2024-01-18T09:00:00Z",
+    "url": "https://example.com/news/n14"
+  },
+  {
+    "id": "N15",
+    "title": "HDFC Bank stock surges 5% on strong earnings announcement",
+    "content": "HDFC Bank's stock price surged 5% following the announcement of strong quarterly earnings and dividend payout. The bank's shares closed at a 52-week high on the NSE. Analysts have upgraded the stock rating to 'buy' with a target price increase.",
+    "source": "CNBC TV18",
+    "published_at": "2024-01-15T15:00:00Z",
+    "url": "https://example.com/news/n15"
+  },
+  {
+    "id": "N16",
+    "title": "SEBI introduces new regulations for mutual fund investments",
+    "content": "The Securities and Exchange Board of India introduced new regulations for mutual fund investments, focusing on transparency and investor protection. The regulations mandate clearer disclosure of fees and risks. Fund houses will have 90 days to comply with the new norms.",
+    "source": "SEBI Official",
+    "published_at": "2024-01-18T10:00:00Z",
+    "url": "https://example.com/news/n16"
+  },
+  {
+    "id": "N17",
+    "title": "Nifty Bank index gains 3% on positive sector outlook",
+    "content": "The Nifty Bank index gained 3% in today's trading session, driven by positive outlook for the banking sector. All major banking stocks showed gains, with private sector banks leading the rally. The index closed at its highest level in six months.",
+    "source": "ET Markets",
+    "published_at": "2024-01-15T16:00:00Z",
+    "url": "https://example.com/news/n17"
+  },
+  {
+    "id": "N18",
+    "title": "Wipro reports mixed Q3 results, misses revenue estimates",
+    "content": "Wipro reported mixed third-quarter results, with revenue missing analyst estimates by 2%. While the company's profit margins improved, revenue growth was slower than expected. The IT services company cited client budget constraints as a key factor.",
+    "source": "The Hindu Business Line",
+    "published_at": "2024-01-18T11:00:00Z",
+    "url": "https://example.com/news/n18"
+  },
+  {
+    "id": "N19",
+    "title": "Bharti Airtel adds 5 million subscribers in December quarter",
+    "content": "Bharti Airtel added 5 million new subscribers in the December quarter, maintaining its growth momentum in the telecom sector. The company's average revenue per user (ARPU) increased by 3% to Rs 203. Airtel's 5G network coverage expanded to 500 cities.",
+    "source": "Business Standard",
+    "published_at": "2024-01-19T09:00:00Z",
+    "url": "https://example.com/news/n19"
+  },
+  {
+    "id": "N20",
+    "title": "Jio announces new 5G plans, targets enterprise segment",
+    "content": "Reliance Jio announced new 5G plans targeting the enterprise segment, with focus on IoT and cloud services. The company plans to invest Rs 10,000 crores in expanding its 5G infrastructure. Jio aims to cover 90% of India's population with 5G by end of 2024.",
+    "source": "Economic Times",
+    "published_at": "2024-01-19T10:00:00Z",
+    "url": "https://example.com/news/n20"
+  },
+  {
+    "id": "N21",
+    "title": "Maruti Suzuki launches new electric vehicle model",
+    "content": "Maruti Suzuki launched its first electric vehicle model, marking the company's entry into the EV segment. The vehicle is priced competitively and targets the mass market. The company plans to launch three more EV models by 2025.",
+    "source": "Auto Car India",
+    "published_at": "2024-01-19T11:00:00Z",
+    "url": "https://example.com/news/n21"
+  },
+  {
+    "id": "N22",
+    "title": "Tata Motors reports strong commercial vehicle sales",
+    "content": "Tata Motors reported strong sales in the commercial vehicle segment, with a 22% year-on-year growth. The company's passenger vehicle segment also showed improvement. Tata Motors expects the momentum to continue in the coming quarters.",
+    "source": "Financial Express",
+    "published_at": "2024-01-19T12:00:00Z",
+    "url": "https://example.com/news/n22"
+  },
+  {
+    "id": "N23",
+    "title": "Automobile sector sees 15% growth in January sales",
+    "content": "The Indian automobile sector reported 15% growth in January sales compared to the same period last year. Both passenger vehicles and two-wheelers showed strong performance. Industry experts attribute the growth to improved consumer sentiment and new model launches.",
+    "source": "SIAM",
+    "published_at": "2024-01-20T09:00:00Z",
+    "url": "https://example.com/news/n23"
+  },
+  {
+    "id": "N24",
+    "title": "Adani Group companies rally on debt restructuring news",
+    "content": "Shares of Adani Group companies rallied after the conglomerate announced successful debt restructuring for its port and power businesses. The group's total debt has been reduced by 15% through strategic refinancing. Analysts view this as a positive development.",
+    "source": "Moneycontrol",
+    "published_at": "2024-01-20T10:00:00Z",
+    "url": "https://example.com/news/n24"
+  },
+  {
+    "id": "N25",
+    "title": "L&T wins infrastructure project worth Rs 5,000 crores",
+    "content": "Larsen & Toubro secured a major infrastructure project worth Rs 5,000 crores for building a metro rail system. The project is expected to be completed in 36 months. This is one of the largest infrastructure contracts awarded this year.",
+    "source": "Business Standard",
+    "published_at": "2024-01-20T11:00:00Z",
+    "url": "https://example.com/news/n25"
+  },
+  {
+    "id": "N26",
+    "title": "RBI Governor Shaktikanta Das addresses inflation concerns",
+    "content": "RBI Governor Shaktikanta Das addressed concerns about persistent inflation in a press conference. He emphasized the central bank's commitment to maintaining price stability while supporting economic growth. The RBI will continue to monitor inflation trends closely.",
+    "source": "RBI Official",
+    "published_at": "2024-01-15T14:00:00Z",
+    "url": "https://example.com/news/n26"
+  },
+  {
+    "id": "N27",
+    "title": "Pharmaceutical sector faces pricing pressure from new regulations",
+    "content": "The pharmaceutical sector is facing pricing pressure following new drug pricing regulations introduced by the government. Major pharma companies are expected to see margin compression. The regulations aim to make medicines more affordable for consumers.",
+    "source": "Pharma Times",
+    "published_at": "2024-01-21T09:00:00Z",
+    "url": "https://example.com/news/n27"
+  },
+  {
+    "id": "N28",
+    "title": "Sun Pharma launches new oncology drug in India",
+    "content": "Sun Pharmaceutical Industries launched a new oncology drug in the Indian market, expanding its cancer treatment portfolio. The drug has received approval from the Drug Controller General of India. Sun Pharma expects strong demand for the product.",
+    "source": "Economic Times",
+    "published_at": "2024-01-21T10:00:00Z",
+    "url": "https://example.com/news/n28"
+  },
+  {
+    "id": "N29",
+    "title": "NSE introduces new derivative products for retail investors",
+    "content": "The National Stock Exchange introduced new derivative products specifically designed for retail investors. The products have lower contract sizes and simplified structures. NSE expects these products to increase retail participation in derivatives trading.",
+    "source": "NSE Official",
+    "published_at": "2024-01-21T11:00:00Z",
+    "url": "https://example.com/news/n29"
+  },
+  {
+    "id": "N30",
+    "title": "Gold prices surge on global economic uncertainty",
+    "content": "Gold prices surged to a three-month high amid global economic uncertainty and geopolitical tensions. The precious metal is seen as a safe haven asset. Analysts expect gold prices to remain elevated in the near term.",
+    "source": "Commodity Online",
+    "published_at": "2024-01-21T12:00:00Z",
+    "url": "https://example.com/news/n30"
+  },
+  {
+    "id": "N31",
+    "title": "Banking stocks outperform market on strong sector fundamentals",
+    "content": "Banking stocks outperformed the broader market today, with the banking index gaining 2.5%. Strong fundamentals including declining NPAs, credit growth, and improved profitability drove the rally. Analysts remain bullish on the sector's prospects.",
+    "source": "ET Markets",
+    "published_at": "2024-01-15T17:00:00Z",
+    "url": "https://example.com/news/n31"
+  },
+  {
+    "id": "N32",
+    "title": "RBI monetary policy committee votes for rate hike",
+    "content": "The Reserve Bank of India's monetary policy committee voted unanimously to increase the policy rate. All six members of the MPC supported the decision to raise rates by 25 basis points. The committee cited inflation concerns and global economic conditions.",
+    "source": "RBI Official",
+    "published_at": "2024-01-15T11:10:00Z",
+    "url": "https://example.com/news/n32"
+  }
+]
+
