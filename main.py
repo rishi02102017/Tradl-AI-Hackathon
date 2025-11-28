@@ -11,11 +11,14 @@ if __name__ == "__main__":
     from src.database.init_db import init_database
     init_database()
     
+    # Get port from environment (for deployment) or use default
+    port = int(os.environ.get("PORT", 8000))
+    
     # Run the API server
     uvicorn.run(
         "src.api.main:app",
         host="0.0.0.0",
-        port=8000,
-        reload=True
+        port=port,
+        reload=os.getenv("ENV") != "production"  # Disable reload in production
     )
 

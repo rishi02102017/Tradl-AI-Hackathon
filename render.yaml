@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: financial-news-api
+    env: python
+    buildCommand: pip install -r requirements.txt && python -m spacy download en_core_web_sm
+    startCommand: python main.py
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./financial_news.db
+      - key: PORT
+        value: 8000
+    healthCheckPath: /
+
