@@ -193,6 +193,11 @@ Includes 32 diverse financial news articles covering:
 
 **Documentation & Demo (10%)** - Clear README, working demos, good code structure
 
+## Author
+
+**Jyotishman Das**  
+Pursuing M.Tech in Artificial Intelligence from Indian Institute of Technology Jodhpur
+
 ## License
 
 MIT
