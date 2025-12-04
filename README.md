@@ -4,6 +4,11 @@
   <img src="Tradl_AI_logo.jpeg" alt="Tradl AI Logo" width="200"/>
 </p>
 
+<p align="center">
+  <strong>By Jyotishman Das</strong><br>
+  <em>Pursuing M.Tech in Artificial Intelligence from Indian Institute of Technology Jodhpur</em>
+</p>
+
 ---
 
 ## What This Does
