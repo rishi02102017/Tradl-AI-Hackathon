@@ -1,0 +1,16 @@
+
+graph LR
+    A[News Article] --> B[spaCy NER]
+    A --> C[Pattern Matching]
+    B --> D[Companies]
+    C --> D
+    B --> E[Sectors]
+    C --> E
+    B --> F[Regulators]
+    C --> F
+    D --> G[Stock Mapper]
+    E --> G
+    F --> G
+    G --> H[Direct Impact<br/>100% Confidence]
+    G --> I[Sector Impact<br/>60-80% Confidence]
+    G --> J[Regulatory Impact<br/>Variable Confidence]

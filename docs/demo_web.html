@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial News Intelligence - Query Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --white: #ffffff;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--dark);
+            min-height: 100vh;
+            color: var(--white);
+            overflow-x: hidden;
+            position: relative;
+            padding: 20px;
+        }
+        
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+                linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            z-index: 0;
+            animation: backgroundShift 20s ease infinite;
+        }
+        
+        @keyframes backgroundShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* Grid Pattern */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .query-section {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .query-input {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"] {
+            flex: 1;
+            padding: 16px 24px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            font-size: 1.1rem;
+            color: var(--white);
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(15, 23, 42, 1);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+        
+        input[type="text"]::placeholder {
+            color: var(--gray);
+        }
+        
+        button {
+            padding: 16px 32px;
+            background: var(--gradient-2);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+        
+        button:disabled {
+            background: var(--gray);
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .example-queries {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .example-query {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            color: var(--gray);
+        }
+        
+        .example-query:hover {
+            background: var(--gradient-2);
+            color: var(--white);
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+        
+        .example-queries span:first-child {
+            color: var(--gray);
+            margin-right: 10px;
+        }
+        
+        .results {
+            margin-top: 30px;
+        }
+        
+        .query-info {
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+        
+        .query-info h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+        
+        .query-info p {
+            color: var(--gray);
+            margin-bottom: 8px;
+        }
+        
+        .query-info strong {
+            color: var(--white);
+        }
+        
+        .entities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .entity-tag {
+            background: var(--gradient-2);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .result-item {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .result-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-2);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .result-item:hover {
+            transform: translateX(5px);
+            border-color: rgba(37, 99, 235, 0.3);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .result-item:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .result-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .result-content {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .result-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+        
+        .result-meta i {
+            margin-right: 5px;
+            color: var(--primary);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(37, 99, 235, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s linear infinite;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 25px;
+            }
+            
+            .query-input {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-chart-line"></i> Financial News Intelligence</h1>
+        <p class="subtitle">AI-Powered Multi-Agent System for Financial News Analysis</p>
+        
+        <div class="query-section">
+            <div class="query-input">
+                <input type="text" id="queryInput" placeholder="Enter your query (e.g., 'HDFC Bank news', 'Banking sector update')">
+                <button id="queryButton" onclick="executeQuery()">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            
+            <div class="example-queries">
+                <span>Try:</span>
+                <span class="example-query" onclick="setQuery('HDFC Bank news')">
+                    <i class="fas fa-building"></i> HDFC Bank news
+                </span>
+                <span class="example-query" onclick="setQuery('Banking sector update')">
+                    <i class="fas fa-industry"></i> Banking sector update
+                </span>
+                <span class="example-query" onclick="setQuery('RBI policy changes')">
+                    <i class="fas fa-landmark"></i> RBI policy changes
+                </span>
+                <span class="example-query" onclick="setQuery('Interest rate impact')">
+                    <i class="fas fa-percentage"></i> Interest rate impact
+                </span>
+            </div>
+        </div>
+        
+        <div id="results" class="results"></div>
+    </div>
+    
+    <script>
+        const API_URL = 'http://localhost:8000';
+        
+        function setQuery(query) {
+            document.getElementById('queryInput').value = query;
+            executeQuery();
+        }
+        
+        async function executeQuery() {
+            const query = document.getElementById('queryInput').value.trim();
+            const resultsDiv = document.getElementById('results');
+            const queryButton = document.getElementById('queryButton');
+            
+            if (!query) {
+                alert('Please enter a query');
+                return;
+            }
+            
+            queryButton.disabled = true;
+            queryButton.innerHTML = '<span class="spinner"></span>Searching...';
+            
+            resultsDiv.innerHTML = '<div class="loading"><span class="spinner"></span>Searching...</div>';
+            
+            try {
+                const response = await fetch(`${API_URL}/query?q=${encodeURIComponent(query)}`);
+                const data = await response.json();
+                
+                displayResults(data);
+            } catch (error) {
+                resultsDiv.innerHTML = `
+                    <div class="error">
+                        <strong><i class="fas fa-exclamation-triangle"></i> Error:</strong> ${error.message}<br>
+                        Make sure the API server is running on ${API_URL}
+                    </div>
+                `;
+            } finally {
+                queryButton.disabled = false;
+                queryButton.innerHTML = '<i class="fas fa-search"></i> Search';
+            }
+        }
+        
+        function displayResults(data) {
+            const resultsDiv = document.getElementById('results');
+            
+            let html = `
+                <div class="query-info">
+                    <h3><i class="fas fa-info-circle"></i> Query Information</h3>
+                    <p><strong>Query:</strong> ${data.query}</p>
+                    <p><strong>Intent:</strong> ${data.query_intent.replace('_', ' ')}</p>
+                    <p><strong>Results Found:</strong> ${data.count}</p>
+                    ${Object.keys(data.extracted_entities || {}).length > 0 ? `
+                        <div class="entities">
+                            ${Object.entries(data.extracted_entities).map(([type, entities]) => 
+                                entities.map(e => `<span class="entity-tag">${type}: ${e.name}</span>`).join('')
+                            ).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+            
+            if (data.relevant_articles && data.relevant_articles.length > 0) {
+                data.relevant_articles.forEach(article => {
+                    html += `
+                        <div class="result-item">
+                            <div class="result-title"><i class="fas fa-file-alt"></i> ${article.title || 'No title'}</div>
+                            <div class="result-content">${(article.content || '').substring(0, 250)}...</div>
+                            <div class="result-meta">
+                                <span><i class="fas fa-newspaper"></i> ${article.source || 'Unknown source'}</span>
+                                ${article.published_at ? `<span><i class="fas fa-calendar"></i> ${new Date(article.published_at).toLocaleDateString()}</span>` : ''}
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                html += '<div class="result-item"><p style="text-align: center; color: var(--gray);">No relevant articles found.</p></div>';
+            }
+            
+            resultsDiv.innerHTML = html;
+        }
+        
+        // Allow Enter key to trigger search
+        document.getElementById('queryInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                executeQuery();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+graph TB
+    A[Financial News Sources] --> B[News Ingestion Service]
+    B --> C[LangGraph Orchestrator]
+    C --> D[Deduplication Agent]
+    C --> E[Entity Extraction Agent]
+    C --> F[Impact Mapping Agent]
+    C --> G[Query Agent]
+    D --> H[Vector Embeddings]
+    E --> I[spaCy NER]
+    F --> J[Stock Mapper]
+    G --> K[Semantic Search]
+    H --> L[SQLite Database]
+    I --> L
+    J --> L
+    K --> L
+    L --> M[FastAPI Endpoints]
+    M --> N[Web Dashboard]
+    M --> O[CLI Interface]

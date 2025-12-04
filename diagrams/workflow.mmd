@@ -1,0 +1,29 @@
+
+sequenceDiagram
+    participant User
+    participant API
+    participant Orchestrator
+    participant DedupAgent
+    participant EntityAgent
+    participant ImpactAgent
+    participant QueryAgent
+    participant Database
+
+    User->>API: Submit News Articles
+    API->>Orchestrator: Process Articles
+    Orchestrator->>DedupAgent: Identify Duplicates
+    DedupAgent-->>Orchestrator: Unique Stories
+    Orchestrator->>EntityAgent: Extract Entities
+    EntityAgent-->>Orchestrator: Companies, Sectors, Regulators
+    Orchestrator->>ImpactAgent: Map to Stocks
+    ImpactAgent-->>Orchestrator: Stock Impacts with Confidence
+    Orchestrator->>Database: Store Results
+    Database-->>API: Return Data
+    API-->>User: Processed News
+
+    User->>API: Natural Language Query
+    API->>QueryAgent: Process Query
+    QueryAgent->>Database: Search & Retrieve
+    Database-->>QueryAgent: Relevant Articles
+    QueryAgent-->>API: Context-Aware Results
+    API-->>User: Query Response

@@ -1,0 +1,9 @@
+
+flowchart LR
+    A[Article 1:<br/>RBI raises repo rate<br/>by 25bps] --> D[Semantic<br/>Similarity<br/>Detection]
+    B[Article 2:<br/>Reserve Bank hikes<br/>interest rates 0.25%] --> D
+    C[Article 3:<br/>Central bank raises<br/>policy rate 25bps] --> D
+    D --> E{Similarity<br/>>= 85%?}
+    E -->|Yes| F[Consolidated<br/>Unique Story]
+    E -->|No| G[Separate<br/>Stories]
+    F --> H[Single Story<br/>with All Info]

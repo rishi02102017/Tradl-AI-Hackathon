@@ -1,0 +1,18 @@
+
+flowchart TD
+    A[User Query:<br/>HDFC Bank news] --> B[Query Agent]
+    B --> C[Extract Entities]
+    C --> D{Query Intent?}
+    D -->|Company| E[Direct Mentions]
+    D -->|Sector| F[Sector-wide News]
+    D -->|Regulator| G[Regulator-specific]
+    D -->|Thematic| H[Semantic Search]
+    E --> I[Company Articles]
+    F --> J[All Sector Articles]
+    G --> K[Regulator Articles]
+    H --> L[Theme-matched Articles]
+    I --> M[Context Expansion:<br/>Add Sector News]
+    J --> M
+    K --> M
+    L --> M
+    M --> N[Return Results]
